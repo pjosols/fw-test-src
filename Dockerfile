@@ -2,7 +2,7 @@
 FROM alpine:3.5
 
 # Install python and pip
-RUN apk add nmap
+RUN apk add nmap --no-cache
 
 # copy files required for the app to run
 COPY test.sh /opt/fw-tests/
