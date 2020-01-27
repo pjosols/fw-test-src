@@ -6,6 +6,7 @@ import requests
 for port in __list_of_ports__:
 
     try:
+        # this only works for http endpoints
         r = requests.get('http://__destination_ip__:{}'.format(port), timeout=10)
         message = "Success"
 
