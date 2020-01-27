@@ -1,0 +1,4 @@
+sut:
+  build: .
+  command: echo "Docker Cloud demo test!"
+  
