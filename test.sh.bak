@@ -1,0 +1,25 @@
+#!/bin/ash
+
+# nmap -p 100,200,300,400,500 10.4.34.51
+nmap -Pn -p __list_of_ports__ __destination_ip__ --reason --host-timeout 10
+
+# or use -T2 to slow down nmap, instead of -Pn (treat hosts as online). Not sure why.
+
+# this
+#  -p <port ranges>: Only scan specified ports
+#    Ex: -p22; -p1-65535; -p U:53,111,137,T:21-25,80,139,8080,S:9
+
+
+# or with nc
+# nc -vz 10.4.34.51 5005
+
+
+# see for udp listener example
+# https://github.com/mendhak/docker-udp-listener
+
+# nmap for udp
+# nmap -sU -p 5005 10.4.34.51 --reason --host-timeout 10
+# problem: open|filtered returned
+
+# or with nc
+# nc -uvz 10.4.34.51 5005
