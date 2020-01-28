@@ -6,5 +6,5 @@ if [[ -n "${TCP_PORTS}" ]]; then
 fi
 
 if [[ -n "${TCP_PORTS}" ]]; then
-    nc -uzvv $DEST_IP $TCP_PORTS
+    nc -uzvv $DEST_IP $UDP_PORTS
 fi
