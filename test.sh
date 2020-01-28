@@ -2,7 +2,7 @@
 
 
 # upd
-# nc -uzvv 10.4.34.51 5005 5006 4444
+nc -uzvv __destination_ip__ __list_of_udp_ports__
 
 # tcp
-nc -zvv __destination_ip__ __list_of_ports__ 600
+nc -zvv __destination_ip__ __list_of_tcp_ports__
