@@ -1,8 +1,8 @@
 # our base image
 FROM ubuntu:18.04
 
-RUN apt update \
-    apt-get install netcat
+RUN apt update
+RUN apt-get install netcat
 
 # copy files required for the app to run
 COPY test.sh /opt/fw-tests/
