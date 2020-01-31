@@ -1,8 +1,13 @@
+# ubuntu-python-minimal
 FROM ubuntu:18.04
 
-RUN apt update
-RUN apt-get install netcat -y
+RUN apt update \
+    && apt-get install -y \
+       netcat \
+       python-minimal \
+    && apt-get autoremove \
+    && apt-get clean
 
-COPY test.sh /tmp/test.sh
+COPY firewall-tests.py /tmp/firewall-tests.py
 
-CMD ["/tmp/test.sh"]
+CMD ["python", "-u", "/tmp/firewall-tests.py"]
